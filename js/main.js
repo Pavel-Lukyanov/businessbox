@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
     });
 
     //Слайдер "Наши услуги"
@@ -45,4 +49,20 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: '.swiper-button-prev',
         },
     });
+
+    //Аккордеон
+    let accordeon = document.querySelector('.accordeon__container');
+    let accordeonBtns = accordeon.querySelectorAll('.accordeon__show');
+    if (accordeonBtns.length > 0) {
+        accordeonBtns.forEach(el => {
+            el.addEventListener('click', function () {
+                el.parentElement.classList.toggle('active');
+                if(el.textContent.trim() == 'Ответ') {
+                    el.textContent = 'Скрыть ответ';
+                } else if(el.textContent.trim() == 'Скрыть ответ'){
+                    el.textContent = 'Ответ';
+                }
+            })
+        })
+    }
 })
