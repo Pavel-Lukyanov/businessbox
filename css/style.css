@@ -361,7 +361,7 @@
 
 .hero__link::after {
     content: '';
-    background-image: url(../img/arwow-hero.svg);
+    background-image: url(../img/arow-hero.svg);
     background-size: 10px 11px;
     width: 10px;
     height: 11px;
