@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         direction: 'horizontal',
         loop: true,
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-pagination--hero',
             type: 'custom',
             renderCustom: function (swiper, current, total) {
                 return ('0' + current).slice(-2) + ' / ' + ('0' + total).slice(-2);
@@ -18,9 +18,23 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         // Navigation arrows
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-next--hero',
         },
+    });
+
+    //Слайдер "Наши услуги"
+    const servicesSlider = new Swiper(".swiper-services", {
+
+        slidesPerView: 3,
+        grid: {
+            rows: 2,
+            fill: 'row'
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+          },
+        spaceBetween: 30,
     });
 
     //Слайдер "Наши кейсы"
@@ -31,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Navigation arrows
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-prev-result',
+            prevEl: '.swiper-button-next-result',
         },
         effect: 'fade',
         fadeEffect: {
@@ -40,15 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-    //Слайдер "Наши услуги"
-    const servicesSlider = new Swiper('.swiper-services', {
-        direction: 'horizontal',
-        loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+
+
 
     //Аккордеон
     let accordeon = document.querySelector('.accordeon__container');
@@ -73,3 +80,4 @@ document.addEventListener('DOMContentLoaded', function () {
     im.mask(selector);
 
 })
+

@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Businessbox</title>
-    <link rel="stylesheet" href="./lib/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="./lib/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script defer src="./lib/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- <script defer src="./lib/swiper-bundle.min.js"></script> -->
     <script defer src="./lib/inputmask.min.js"></script>
     <script defer src="./js/main.js"></script>
 </head>
@@ -356,174 +358,280 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="services">
-            <h2 class="title">
-                Наши услуги
-            </h2>
-            <div class="services__cards">
-                <div class="swiper-services">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="services__item">
-                                <h3 class="services__title">
-                                    Сопровождение
-                                </h3>
-                                <p class="services__text">
-                                    Активное продвижение с упором на результат
-                                </p>
-                                <a class="services__link" href="#">
-                                    Получить услугу
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="services__item">
-                                <h3 class="services__title">
-                                    Запуск проекта
-                                </h3>
-                                <p class="services__text">
-                                    Комплексный запуск бренда на маркетплейсах для новичков.
-                                </p>
-                                <a class="services__link" href="#">
-                                    Получить услугу
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="services__item">
-                                <h3 class="services__title">
-                                    Внутренняя реклама
-                                </h3>
-                                <p class="services__text">
-                                    Настройка Предоставляем еженедельные отчеты об эффективности.
-                                </p>
-                                <a class="services__link" href="#">
-                                    Получить услугу
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="services__item">
-                                <h3 class="services__title">
-                                    Внешняя реклама
-                                </h3>
-                                <p class="services__text">
-                                    Настройка и ведение рекламы в таких сервисах как Яндекс и соцсе
-                                </p>
-                                <a class="services__link" href="#">
-                                    Получить услугу
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="services__item">
-                                <h3 class="services__title">
-                                    Паблики и блогеры
-                                </h3>
-                                <p class="services__text">
-                                    Поиск и размещение рекламы у подходящих по целевой аудитории п
-                                </p>
-                                <a class="services__link" href="#">
-                                    Получить услугу
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="services__item">
-                                <h3 class="services__title">
-                                    Создание бренда и упаковка
-                                </h3>
-                                <p class="services__text">
-                                    Поиск и размещение рекламы у подходящих по целевой аудитории п копия
-                                </p>
-                                <a class="services__link" href="#">
-                                    Получить услугу
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-scrollbar"></div>
-                </div>
-            </div>
-            <div class="performance">
-                <div class="performance__left">
-                    <h2 class="title">
-                        “Главный принцип на сегодня - все для покупателя!”.
-                    </h2>
-                    <div class="performance__container">
-                        <img src="./img/" alt="Фото директора">
-                        <div class="performance__text--container">
-                            <p class="performance__text">
-                                Я уверен, что качество, самый главный показатель, на что вы должны ориентироваться
-                            </p>
-                            <p class="performance__name">
-                                Владимир Иванов
-                                <span class="performance__position">
-                                    Генеральный директор
-                                </span>
-                            </p>
-                            <a class="performance__link" href="#">
-                                Написать мне
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="performance__right">
-                    <img src="./img/" alt="Фото">
-                </div>
-            </div>
-            <div class="experience">
-                <h2 class="title">
-                    Наш опыт
-                    <span class="title--years">
-                        2017-2022
-                    </span>
+        <section class="services">
+            <div class="services__container">
+                <h2 class="title title--services">
+                    Наши услуги
                 </h2>
-                <div class="experience__timeline">
-                    <div class="experience__card 2017">
-                        2017
-                        <img class="experience__line" src="./img/" alt="">
-                        <p class="experience__text">
-                            Выход на американский маркетплейс <b>Amazon.com</b> по модели Private label (создание
-                            собственного бренда). Работа в нишах: товары для дома, косметика, ортопедия, товары для
-                            спорта.
-                        </p>
+                <div class="services__cards">
+                    <div class="swiper swiper-services">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Сопровождение
+                                        </h3>
+                                        <p class="services__text">
+                                            Активное продвижение с упором на результат
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Запуск проекта
+                                        </h3>
+                                        <p class="services__text">
+                                            Комплексный запуск бренда на маркетплейсах для новичков.
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Внутренняя реклама
+                                        </h3>
+                                        <p class="services__text">
+                                            Настройка Предоставляем еженедельные отчеты об эффективности.
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Внешняя реклама
+                                        </h3>
+                                        <p class="services__text">
+                                            Настройка и ведение рекламы в таких сервисах как Яндекс и соцсе
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Паблики и блогеры
+                                        </h3>
+                                        <p class="services__text">
+                                            Поиск и размещение рекламы у подходящих по целевой аудитории п
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Создание бренда и упаковка
+                                        </h3>
+                                        <p class="services__text">
+                                            Поиск и размещение рекламы у подходящих по целевой аудитории п копия
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Сопровождение
+                                        </h3>
+                                        <p class="services__text">
+                                            Активное продвижение с упором на результат
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Запуск проекта
+                                        </h3>
+                                        <p class="services__text">
+                                            Комплексный запуск бренда на маркетплейсах для новичков.
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Внутренняя реклама
+                                        </h3>
+                                        <p class="services__text">
+                                            Настройка Предоставляем еженедельные отчеты об эффективности.
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Внешняя реклама
+                                        </h3>
+                                        <p class="services__text">
+                                            Настройка и ведение рекламы в таких сервисах как Яндекс и соцсе
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Паблики и блогеры
+                                        </h3>
+                                        <p class="services__text">
+                                            Поиск и размещение рекламы у подходящих по целевой аудитории п
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide--services">
+                                <div class="services__item">
+                                    <div>
+                                        <h3 class="services__title">
+                                            Создание бренда и упаковка
+                                        </h3>
+                                        <p class="services__text">
+                                            Поиск и размещение рекламы у подходящих по целевой аудитории п копия
+                                        </p>
+                                    </div>
+                                    <a class="services__link" href="#">
+                                        Получить услугу
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
                     </div>
-                    <div class="experience__card 2018">
-                        2018
-                        <img class="experience__line" src="./img/" alt="">
-                        <p class="experience__text">
-                            Выход на Wildberries и Ozon. Создание брендов Naturalist и Organic Republic. Работа в нише
-                            продуктов питания. Более 90 тыс. продаж.
-                        </p>
+                </div>
+                <div class="performance">
+                    <div class="performance__left">
+                        <h2 class="title">
+                            “Главный принцип на сегодня - все для покупателя!”.
+                        </h2>
+                        <div class="performance__container">
+                            <img src="./img/" alt="Фото директора">
+                            <div class="performance__text--container">
+                                <p class="performance__text">
+                                    Я уверен, что качество, самый главный показатель, на что вы должны ориентироваться
+                                </p>
+                                <p class="performance__name">
+                                    Владимир Иванов
+                                    <span class="performance__position">
+                                        Генеральный директор
+                                    </span>
+                                </p>
+                                <a class="performance__link" href="#">
+                                    Написать мне
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="experience__card 2019">
-                        2019
-                        <img class="experience__line" src="./img/" alt="">
-                        <p class="experience__text">
-                            Ниша Витамины и БАДы.<br>
-                            Некоторые продукты вывели в ТОП 10 в данной категории.
-                        </p>
+                    <div class="performance__right">
+                        <img src="./img/" alt="Фото">
                     </div>
-                    <div class="experience__card 2020">
-                        2020
-                        <img class="experience__line" src="./img/" alt="">
-                        <p class="experience__text">
-                            Ниша Витамины и БАДы.<br>
-                            Некоторые продукты вывели <b>в ТОП 10</b> в данной категории.
-                        </p>
-                    </div>
-                    <div class="experience__card 2021">
-                        2021
-                        <img class="experience__line" src="./img/" alt="">
-                        <p class="experience__text">
-                            Ниша мужской одежды. Многие наши карточки вошли в топ 25 в категориях с оборотом <b>от 100
-                                до 700 млн.</b> рублей в месяц.
-                        </p>
+                </div>
+                <div class="experience">
+                    <h2 class="title">
+                        Наш опыт
+                        <span class="title--years">
+                            2017-2022
+                        </span>
+                    </h2>
+                    <div class="experience__timeline">
+                        <div class="experience__card 2017">
+                            2017
+                            <img class="experience__line" src="./img/" alt="">
+                            <p class="experience__text">
+                                Выход на американский маркетплейс <b>Amazon.com</b> по модели Private label (создание
+                                собственного бренда). Работа в нишах: товары для дома, косметика, ортопедия, товары для
+                                спорта.
+                            </p>
+                        </div>
+                        <div class="experience__card 2018">
+                            2018
+                            <img class="experience__line" src="./img/" alt="">
+                            <p class="experience__text">
+                                Выход на Wildberries и Ozon. Создание брендов Naturalist и Organic Republic. Работа в
+                                нише
+                                продуктов питания. Более 90 тыс. продаж.
+                            </p>
+                        </div>
+                        <div class="experience__card 2019">
+                            2019
+                            <img class="experience__line" src="./img/" alt="">
+                            <p class="experience__text">
+                                Ниша Витамины и БАДы.<br>
+                                Некоторые продукты вывели в ТОП 10 в данной категории.
+                            </p>
+                        </div>
+                        <div class="experience__card 2020">
+                            2020
+                            <img class="experience__line" src="./img/" alt="">
+                            <p class="experience__text">
+                                Ниша Витамины и БАДы.<br>
+                                Некоторые продукты вывели <b>в ТОП 10</b> в данной категории.
+                            </p>
+                        </div>
+                        <div class="experience__card 2021">
+                            2021
+                            <img class="experience__line" src="./img/" alt="">
+                            <p class="experience__text">
+                                Ниша мужской одежды. Многие наши карточки вошли в топ 25 в категориях с оборотом <b>от
+                                    100
+                                    до 700 млн.</b> рублей в месяц.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <section class="question__container">
             <div class="question">
                 <div class="question__left">
@@ -536,7 +644,8 @@
                                 Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее время, вы
                                 можете надолго заморозить свои деньги и потерять часть из них?
                                 <div class="accordeon__hidden">
-                                    Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее время, вы можете надолго заморозить свои деньги и потерять часть из них?
+                                    Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее
+                                    время, вы можете надолго заморозить свои деньги и потерять часть из них?
                                 </div>
                                 <button class="accordeon__show">
                                     Ответ
@@ -549,7 +658,8 @@
                                 Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее время, вы
                                 можете надолго заморозить свои деньги и потерять часть из них?
                                 <div class="accordeon__hidden">
-                                    Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее время, вы можете надолго заморозить свои деньги и потерять часть из них?
+                                    Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее
+                                    время, вы можете надолго заморозить свои деньги и потерять часть из них?
                                 </div>
                                 <button class="accordeon__show">
                                     Ответ
@@ -561,7 +671,8 @@
                                 Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее время, вы
                                 можете надолго заморозить свои деньги и потерять часть из них?
                                 <div class="accordeon__hidden">
-                                    Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее время, вы можете надолго заморозить свои деньги и потерять часть из них?
+                                    Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее
+                                    время, вы можете надолго заморозить свои деньги и потерять часть из них?
                                 </div>
                                 <button class="accordeon__show">
                                     Ответ
@@ -573,7 +684,8 @@
                                 Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее время, вы
                                 можете надолго заморозить свои деньги и потерять часть из них?
                                 <div class="accordeon__hidden">
-                                    Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее время, вы можете надолго заморозить свои деньги и потерять часть из них?
+                                    Есть ниши я ярко выраженной сезонностью – если вы зайдете в нее в неподходящее
+                                    время, вы можете надолго заморозить свои деньги и потерять часть из них?
                                 </div>
                                 <button class="accordeon__show">
                                     Ответ
@@ -614,7 +726,7 @@
                 </div>
                 <div class="topical__item">
                     <h3 class="card__title card__title--topical">
-                        Новое о доставке WILDBERRIES 
+                        Новое о доставке WILDBERRIES
                     </h3>
                     <span class="card__date card__date--topical">
                         20.01.2022
