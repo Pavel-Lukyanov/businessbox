@@ -682,10 +682,6 @@
     display: block;
 }
 
-.cooperation {
-    padding: 90px 30px 80px 30px;
-}
-
 .cooperation__container {
     max-width: 1400px;
     margin: auto;
@@ -733,6 +729,7 @@
 }
 
 .cooperation {
+    padding: 90px 30px 80px 30px;
     background-image: url(../img/dots-background.png), url(../img/cooperation-square.png);
     background-repeat: no-repeat;
     background-position: 10% 30%, right 90%;
@@ -1250,12 +1247,19 @@
     font-weight: 500;
 }
 
+.experience__text--four {
+    margin-top: 13px;
+}
+
 .footer__list--services {
     margin-bottom: 50px;
 }
 
 .services {
     padding: 70px 30px 90px;
+    background-image: url(../img/dots-background.png), url(../img/hero-background.png);
+    background-repeat: no-repeat;
+    background-position: 7% 80%, right 77%;
 }
 
 .services__container {
@@ -1291,8 +1295,6 @@
     font-size: 18px;
     background: #fff;
     height: calc((100% - 30px) / 2) !important;
-
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -1466,6 +1468,11 @@
     margin-left: -74px;
 }
 
+.experience {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .title--experience {
     font-size: 50px;
     font-family: "Montserrat", sans-serif;
@@ -1498,7 +1505,7 @@
 .experience__timeline::before {
     content: '';
     position: absolute;
-    top: -15px;
+    top: -40px;
     bottom: 0;
     height: 3px;
     width: 100%;
