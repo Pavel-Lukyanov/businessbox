@@ -860,6 +860,32 @@ html {
     transform: translateY(0);
 }
 
+.animated__bottom-03s {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.animated__bottom-03s.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.animated__bottom-07s {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: 0.7s;
+}
+
+.animated__bottom-07s.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .animated__top-05s {
     opacity: 0;
     visibility: hidden;
