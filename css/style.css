@@ -206,6 +206,7 @@ html {
     background-color: #FFFFFF;
     width: 100%;
     position: relative;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .menu__dropdown {
@@ -234,7 +235,7 @@ html {
     display: grid;
     grid-template-columns: 0fr 0.4fr 1fr 0.3fr;
     align-items: center;
-    max-width: 1920px;
+    max-width: 1752px;
     margin: auto;
     gap: 20px;
 }
@@ -1510,7 +1511,7 @@ html {
 }
 
 .services__container {
-    max-width: 1500px;
+    max-width: 1600px;
     margin: auto;
 }
 
@@ -1868,6 +1869,109 @@ html {
     grid-column-end: 3;
 }
 
+.breadcrumb {
+    padding: 22px 30px 0;
+    max-width: 1712px;
+    margin: auto;
+    margin-bottom: 65px;
+}
+
+.breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.breadcrumb__link {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(183, 182, 182);
+}
+
+.breadcrumb__span {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #d44072;
+    text-decoration: underline;
+}
+
+.services__img {
+    max-width: 514px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 339px;
+    margin-bottom: 24px;
+}
+
+.services__cards__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 65px;
+    row-gap: 35px;
+}
+
+.services__card {
+    position: relative;
+}
+
+.card__name {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(36, 36, 36);
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.card__description {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(36, 36, 36);
+    line-height: 1.333;
+    margin-bottom: 40px;
+}
+
+.card__link--services {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(193, 39, 118);
+    text-decoration: underline;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+  
+.services__page {
+    padding: 0 30px 160px;
+    position: relative;
+    background-image: url(../img/services-square.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 75% 0%;
+}
+
+.services__page::after {
+    content: '';
+    position: absolute;
+    font-family: "DelaGothicOne", sans-serif;
+    background-color: transparent;
+    background-image: url(../img/agency.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    width: 7%;
+    height: 64%;
+    left: 0;
+    top: 10%;
+}
+  
+@media(max-width: 1800px) {
+    .services__page::after {
+        background-image: none;
+    }
+}
+
 @media(max-width: 1460px) {
     .promotion__right {
         gap: 30px;
@@ -1973,6 +2077,14 @@ html {
 
 @media(max-width: 1000px) {
 
+    .card__name {
+        font-size: 24px;
+    }
+
+    .services__cards__container {
+        column-gap: 50px;
+    }
+
     .topical__container {
         gap: 50px;
         grid-template-columns: 1fr 1fr;
@@ -2023,6 +2135,11 @@ html {
 }
 
 @media(max-width: 900px) {
+
+    .services__cards__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .header__tel {
         display: none;
     }
@@ -2033,6 +2150,15 @@ html {
 }
 
 @media(max-width: 768px) {
+
+    .services__page {
+        background-image: none;
+    }
+
+    .services__page {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     .offer__container {
         padding: 60px 15px 60px;
@@ -2195,6 +2321,31 @@ html {
 }
 
 @media(max-width: 600px) {
+
+    .breadcrumb {
+        margin-bottom: 35px;
+    }
+
+    .title--services {
+        margin-bottom: 35px;
+    }
+
+    .services__cards__container {
+        column-gap: 35px;
+    }
+
+    .services__img {
+        margin-bottom: 15px;
+    }
+
+    .card__name {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .card__description {
+        font-size: 16px;
+    }
 
     .footer__container {
         grid-template-columns: 1fr;
@@ -2371,6 +2522,12 @@ html {
         width: 100%;
         gap: 30px;
         padding-bottom: 20px;
+    }
+}
+
+@media(max-width: 535px) {
+    .services__cards__container {
+        grid-template-columns: 1fr;
     }
 }
 

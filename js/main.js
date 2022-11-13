@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Аккордеон
     let accordeon = document.querySelector('.accordeon__container');
-    let accordeonBtns = accordeon.querySelectorAll('.accordeon__show');
-    if (accordeonBtns.length > 0) {
+    if (accordeon) {
+        let accordeonBtns = accordeon.querySelectorAll('.accordeon__show');
         accordeonBtns.forEach(el => {
             el.addEventListener('click', function () {
                 el.parentElement.classList.toggle('active');
