@@ -774,6 +774,19 @@ html {
     transform: translateX(0);
 }
 
+.animated__left_05s {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
+.animated__left_05s.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
 .animated__left_07s {
     opacity: 0;
     visibility: hidden;
