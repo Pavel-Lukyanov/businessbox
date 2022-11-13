@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Создай свой собственный бренд" />
-    <title>Услуги</title>
+    <title>Статьи</title>
+    <link rel="stylesheet" href="./lib/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./lib/swiper-bundle.min.js"></script>
     <script defer src="./lib/inputmask.min.js"></script>
     <script defer src="./js/main.js"></script>
 </head>
@@ -52,7 +54,7 @@
                         </a>
                     </li>
                     <li class="nav__list">
-                        <a class="nav__link" href="/articles.html">
+                        <a class="nav__link" href="#">
                             статьи
                         </a>
                     </li>
@@ -82,125 +84,97 @@
                 </li>
                 <li class="breadcrumb__item">
                     <span class="breadcrumb__span">
-                        Кейсы
+                        Статьи
                     </span>
                 </li>
             </ul>
         </div>
-        <section class="services__page">
-            <div class="services__container">
-                <h1 class="title title--services animate animated__bottom-05s">
-                    Наши услуги
-                </h1>
-                <div class="services__cards__container">
-                    <div class="services__card animate animated__left_05s">
-                        <img class="services__img" src="./img/services1.png" alt="Инфографика для маркетплейсов">
-                        <h2 class="card__name">
-                            Инфографика для Маркетплейсов
-                        </h2>
-                        <p class="card__description">
-                            Анализ ниш по 18 критериям для лучшего понимания в какую нишу дучше заходить и по какой стратегии
-                        </p>
-                        <a class="card__link card__link--services" href="#">
-                            Подробнее
-                        </a>
+        <section class="articles">
+            <h1 class="title tiltle__articles">
+                Инфографика для маркетплейс
+            </h1>
+            <h2 class="articles__minititle">
+                Рисуем максимально продающие карточки
+            </h2>
+            <p class="articles__description">
+                У каждой площадки свои секреты. С нами вы узнаете - как правильно пользоваться внутренними ресурсами
+                площадок.
+            </p>
+            <div class="swiper-articles">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide--container">
+                        <div class="swiper__left">
+                            <div class="swiper__text">
+                                До
+                            </div>
+                            <img class="swiper__img" src="./img/articles-before.png" alt="До">
+                        </div>
+                        <div class="swiper__left">
+                            <div class="swiper__text">
+                                После
+                            </div>
+                            <img class="swiper__img" src="./img/articles-after.png" alt="После">
+                        </div>
                     </div>
-                    <div class="services__card animate animated__opacity-05s">
-                        <img class="services__img" src="./img/services2.png" alt="Обучение управлению на Маркетплейсах ">
-                        <h2 class="card__name">
-                            Обучение управлению на Маркетплейсах 
-                        </h2>
-                        <p class="card__description">
-                            Анализ ниш по 18 критериям для лучшего понимания в какую нишу дучше заходить и по какой стратегии
-                        </p>
-                        <a class="card__link card__link--services" href="#">
-                            Подробнее
-                        </a>
+                    <div class="swiper-slide swiper-slide--container">
+                        <div class="swiper__left">
+                            <div class="swiper__text">
+                                До
+                            </div>
+                            <img class="swiper__img" src="./img/articles-before.png" alt="До">
+                        </div>
+                        <div class="swiper__left">
+                            <div class="swiper__text">
+                                После
+                            </div>
+                            <img class="swiper__img" src="./img/articles-after.png" alt="После">
+                        </div>
                     </div>
-                    <div class="services__card animate animated__left_05s">
-                        <img class="services__img" src="./img/services3.png" alt="Аналитика спроса">
-                        <h2 class="card__name">
-                            Аналитика спроса
-                        </h2>
-                        <p class="card__description">
-                            Анализ ниш по 18 критериям для лучшего понимания в какую нишу дучше заходить и по какой стратегии
-                        </p>
-                        <a class="card__link card__link--services" href="#">
-                            Подробнее
-                        </a>
+                </div>
+                <div class="swiper-button-next swiper-button-prev--articles"></div>
+                <div class="swiper-button-next swiper-button-next--articles"></div>
+            </div>
+        </section>
+        <section class="how">
+            <h2 class="how__title">
+                Как мы это делаем
+            </h2>
+            <div class="how__container">
+                <div class="how__card">
+                    <div class="how__number">
+                        1
                     </div>
-                    <div class="services__card animate animated__left_05s">
-                        <img class="services__img" src="./img/services4.png" alt="Создание брендов с нуля">
-                        <h2 class="card__name">
-                            Создание брендов с нуля
-                        </h2>
-                        <p class="card__description">
-                            Анализ ниш по 18 критериям для лучшего понимания в какую нишу дучше заходить и по какой стратегии
-                        </p>
-                        <a class="card__link card__link--services" href="#">
-                            Подробнее
-                        </a>
+                    <div class="how__header">
+                        Изучаем товар
                     </div>
-                    <div class="services__card animate animated__opacity-05s">
-                        <img class="services__img" src="./img/services5.png" alt="Продвижение товаров на Маркетплейсах ">
-                        <h2 class="card__name">
-                            Продвижение товаров на Маркетплейсах 
-                        </h2>
-                        <p class="card__description">
-                            Анализ ниш по 18 критериям для лучшего понимания в какую нишу дучше заходить и по какой стратегии
-                        </p>
-                        <a class="card__link card__link--services" href="#">
-                            Подробнее
-                        </a>
+                    <p class="how__description">
+                        Анализ ниш по 18 критериям для лучшего понимания в какую нишу лучше заходить и по какой
+                        стратегии
+                    </p>
+                </div>
+                <div class="how__card">
+                    <div class="how__number">
+                        2
                     </div>
-                    <div class="services__card animate animated__left_05s">
-                        <img class="services__img" src="./img/services6.png" alt="Комплексные решения">
-                        <h2 class="card__name">
-                            Комплексные решения
-                        </h2>
-                        <p class="card__description">
-                            Анализ ниш по 18 критериям для лучшего понимания в какую нишу дучше заходить и по какой стратегии
-                        </p>
-                        <a class="card__link card__link--services" href="#">
-                            Подробнее
-                        </a>
+                    <div class="how__header">
+                        Готовим фото контент
                     </div>
-                    <div class="services__card animate animated__left_05s">
-                        <img class="services__img" src="./img/services7.png" alt="СЕО карточек товара">
-                        <h2 class="card__name">
-                            СЕО карточек товара
-                        </h2>
-                        <p class="card__description">
-                            Анализ ниш по 18 критериям для лучшего понимания в какую нишу дучше заходить и по какой стратегии
-                        </p>
-                        <a class="card__link card__link--services" href="#">
-                            Подробнее
-                        </a>
+                    <p class="how__description">
+                        Анализ ниш по 18 критериям для лучшего понимания в какую нишу лучше заходить и по какой
+                        стратегии
+                    </p>
+                </div>
+                <div class="how__card">
+                    <div class="how__number">
+                        3
                     </div>
-                    <div class="services__card animate animated__opacity-05s">
-                        <img class="services__img" src="./img/services8.png" alt="Закупка товара">
-                        <h2 class="card__name">
-                            Закупка товара
-                        </h2>
-                        <p class="card__description">
-                            Анализ ниш по 18 критериям для лучшего понимания в какую нишу дучше заходить и по какой стратегии
-                        </p>
-                        <a class="card__link card__link--services" href="#">
-                            Подробнее
-                        </a>
+                    <div class="how__header">
+                        Создаем продающие заголовки
                     </div>
-                    <div class="services__card animate animated__left_05s">
-                        <img class="services__img" src="./img/services9.png" alt="Управление рекламой на Маркетплейсах">
-                        <h2 class="card__name">
-                            Управление рекламой на Маркетплейсах
-                        </h2>
-                        <p class="card__description">
-                            Анализ ниш по 18 критериям для лучшего понимания в какую нишу дучше заходить и по какой стратегии
-                        </p>
-                        <a class="card__link card__link--services" href="#">
-                            Подробнее
-                        </a>
-                    </div>
+                    <p class="how__description">
+                        Анализ ниш по 18 критериям для лучшего понимания в какую нишу лучше заходить и по какой
+                        стратегии
+                    </p>
                 </div>
             </div>
         </section>

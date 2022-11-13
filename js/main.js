@@ -79,6 +79,19 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
+    //Слайдер "страницы артикли"
+    const articlesSlider = new Swiper('.swiper-articles', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-prev--articles',
+            prevEl: '.swiper-button-next--articles',
+        },
+    });
+
     //Аккордеон
     let accordeon = document.querySelector('.accordeon__container');
     if (accordeon) {
