@@ -33,8 +33,33 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollbar: {
             el: '.swiper-scrollbar',
             draggable: true,
-          },
-        spaceBetween: 30,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                grid: {
+                    rows: 2,
+                    fill: 'row'
+                },
+            },
+            620: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2,
+                    fill: 'row'
+                },
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2,
+                    fill: 'row'
+                },
+            }
+        }
     });
 
     //Слайдер "Наши кейсы"
@@ -53,9 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
             crossFade: true
         },
     });
-
-
-
 
     //Аккордеон
     let accordeon = document.querySelector('.accordeon__container');
@@ -79,5 +101,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
     im.mask(selector);
 
+    //Валидация формы 
+    let callForm = document.getElementById('callForm');
+    if (callForm) {
+        let input = callForm.querySelector('input');
+        let btn = callForm.querySelector('button');
+
+        input.addEventListener('input', function () {
+            if (!input.value.includes('_') && input.value.includes(' ')) {
+                btn.disabled = false;
+            } else {
+                btn.disabled = true;
+            }
+        })
+    }
+
+    //Отправка формы
+    callForm.addEventListener('submit', submitTel)
+
+    function submitTel(event) {
+        event.preventDefault();
+    }
+
+    //Меню
+    let menuContainer = document.getElementById('menu-dropdown');
+    let burger = document.getElementById('burger');
+    burger.addEventListener('click', function () {
+        burger.classList.toggle('opened');
+        menuContainer.classList.toggle('active');
+    })
+
+    //Анимация
+    function onEntry(entry) {
+        entry.forEach(change => {
+            if (change.isIntersecting) {
+                setTimeout(() => {
+                    change.target.classList.add('active');
+                }, 800)
+            }
+        })
+    }
+    let options = {
+        treshold: [0.5]
+    };
+    let observer = new IntersectionObserver(onEntry, options);
+    let animBlocks = document.querySelectorAll('.animate');
+    animBlocks.forEach(el => {
+        observer.observe(el);
+    })
 })
 
