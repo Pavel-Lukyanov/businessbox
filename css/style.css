@@ -659,7 +659,7 @@ html {
 .create__img {
     display: flex;
     justify-content: flex-end;
-    background-color: #dfdfdd;
+    background-color: #14172d;
 }
 
 .create__img img {
@@ -2501,7 +2501,7 @@ html {
     margin-bottom: 50px;
 }
 
-.result__container {
+.result__detail__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
