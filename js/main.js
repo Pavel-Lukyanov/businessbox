@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-    //Слайдер "страницы артикли"
+    //Слайдер "страница Статьи"
     const articlesSlider = new Swiper('.swiper-articles', {
         // Optional parameters
         direction: 'horizontal',
@@ -89,6 +89,9 @@ document.addEventListener('DOMContentLoaded', function () {
         navigation: {
             nextEl: '.swiper-button-prev--articles',
             prevEl: '.swiper-button-next--articles',
+        },
+        pagination: {
+            el: '.swiper-pagination--articles',
         },
     });
 

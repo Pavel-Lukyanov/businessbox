@@ -1526,6 +1526,7 @@ html {
 .services__container {
     max-width: 1600px;
     margin: auto;
+    padding-top: 65px;
 }
 
 .title--services {
@@ -1886,7 +1887,6 @@ html {
     padding: 22px 30px 0;
     max-width: 1712px;
     margin: auto;
-    margin-bottom: 65px;
 }
 
 .breadcrumb__list {
@@ -1980,9 +1980,28 @@ html {
 }
 
 .articles {
-    max-width: 1600px;
     margin: auto;
-    padding: 0 30px 110px;
+    padding: 65px 30px 50px;
+    background-image: url(../img/services-square.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 85% 2%;
+    position: relative;
+}
+
+.articles::after {
+    content: '';
+    position: absolute;
+    font-family: "DelaGothicOne", sans-serif;
+    background-color: transparent;
+    background-image: url(../img/agency.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    width: 7%;
+    height: 64%;
+    left: 0;
+    top: 10%;
 }
 
 .tiltle__articles {
@@ -2023,9 +2042,14 @@ html {
 }
 
 .swiper-articles {
-    max-width: 1120px;
+    overflow: hidden;
+}
+
+.swiper__articles__container {
+    position: relative;
+    padding: 0 85px 60px;
+    max-width: 1110px;
     margin: auto;
-    overflow-x: hidden;
 }
 
 .swiper-slide--container {
@@ -2049,6 +2073,8 @@ html {
 .how__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 30px;
 }
 
 .how {
@@ -2056,13 +2082,14 @@ html {
     margin: auto;
     padding: 0 30px 220px;
 }
-  
+
 .how__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 430px;
     position: relative;
+    width: 100%;
 }
 
 .how__number {
@@ -2101,10 +2128,53 @@ html {
     bottom: 0;
 }
 
-.swiper-button-prev--articles::after {
-    content: 'asdsad';
+.swiper-button-next--articles {
+    width: 60px;
+    height: 60px;
+    background-color: #d1d0d1;
+    background-image: url(../img/arrow-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+    left: 0;
+    transition: 0.3s;
 }
-  
+
+.swiper-button-prev--articles {
+    width: 60px;
+    height: 60px;
+    background-color: #d1d0d1;
+    background-image: url(../img/arrow-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0;
+    transition: 0.3s;
+    left: auto;
+}
+
+.swiper-button-prev--articles:hover {
+    background-color: #c12676;
+}
+
+.swiper-button-next--articles:hover {
+    background-color: #c12676;
+}
+
+.swiper__img--articles {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 526px;
+    max-height: 727px;
+}
+
+.swiper-pagination--articles {
+    display: none;
+}
+
+.swiper-pagination--articles .swiper-pagination-bullet-active {
+    background-color: #c12776;
+}
 
 @media(max-width: 1800px) {
     .services__page::after {
@@ -2188,9 +2258,14 @@ html {
         gap: 90px;
         align-items: center;
     }
+
+    .articles::after {
+        background-image: none;
+    }
 }
 
 @media(max-width: 1320px) {
+
     .nav__ulist {
         display: none;
     }
@@ -2212,6 +2287,11 @@ html {
 
     .result__link {
         grid-column-start: 1;
+    }
+
+    .how__container {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 50px;
     }
 }
 
@@ -2287,12 +2367,37 @@ html {
     .footer__container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .swiper-slide--container {
+        gap: 20px;
+    }
 }
 
 @media(max-width: 768px) {
 
     .articles {
-        padding: 0 15px 30px;
+        padding: 60px 15px 60px;
+    }
+
+    .articles__minititle {
+        font-size: 23px;
+        line-height: 1.2;
+    }
+
+    .articles__description {
+        font-size: 18px;
+    }
+
+    .how__header {
+        font-size: 23px;
+    }
+
+    .how__description {
+        font-size: 16px;
+    }
+
+    .how__title {
+        font-size: 32px;
     }
 
     .services__page {
@@ -2462,12 +2567,32 @@ html {
     .footer__container {
         padding: 40px 15px;
     }
+
+    .how {
+        padding: 0 15px 60px;
+    }
 }
 
 @media(max-width: 600px) {
 
-    .breadcrumb {
-        margin-bottom: 35px;
+    .swiper-pagination--articles {
+        display: block;
+    }
+
+    .how__container {
+        grid-template-columns: 1fr;
+    }
+
+    .swiper__articles__container {
+        padding: 0 0 50px;
+    }
+
+    .swiper-button-next--articles {
+        display: none;
+    }
+
+    .swiper-button-prev--articles {
+        display: none;
     }
 
     .title--services {
