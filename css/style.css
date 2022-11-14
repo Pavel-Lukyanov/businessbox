@@ -257,7 +257,7 @@ html {
 .nav__link {
     text-transform: uppercase;
     font-size: 15px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: #1a1a1a;
     font-weight: bold;
     line-height: 3.333;
@@ -281,7 +281,7 @@ html {
 
 .header__tel {
     font-size: 18px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: rgb(23, 23, 39);
     font-weight: bold;
     line-height: 18px;
@@ -354,7 +354,7 @@ html {
 
 .hero__minititle {
     font-size: 32px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: rgb(248, 248, 252);
     font-weight: bold;
     line-height: 1.333;
@@ -364,7 +364,7 @@ html {
 
 .hero__text {
     font-size: 24px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: rgb(255, 255, 255);
     line-height: 1.25;
     text-align: left;
@@ -373,7 +373,7 @@ html {
 
 .hero__link {
     font-size: 14px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-transform: uppercase;
@@ -411,7 +411,7 @@ html {
 
 .swiper-pagination--hero {
     font-size: 16px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     left: -45% !important;
@@ -1157,7 +1157,7 @@ html {
     display: block;
     width: fit-content;
     font-size: 16px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: rgb(205, 40, 99);
     font-weight: bold;
     border: none;
@@ -1252,7 +1252,7 @@ html {
 .card__date {
     margin-bottom: 20px;
     font-size: 20px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: rgb(126, 126, 128);
     font-weight: bold;
     display: block;
@@ -1624,7 +1624,7 @@ html {
 
 .services__link {
     font-size: 21px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: #ad0e64;
     border-bottom: 1px solid #ad0e64;
     width: fit-content;
@@ -1750,7 +1750,7 @@ html {
 .title--years {
     display: block;
     font-size: 30px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: rgb(36, 36, 36);
     font-weight: bold;
     line-height: 2.4;
@@ -2229,7 +2229,62 @@ html {
     background-color: #d44072;
     color: #FFFFFF;
 }
-  
+
+.keys__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.keys__card {
+    position: relative;
+}
+
+.keys__invisible {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 1, 2, 0.8);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.keys__card:hover .keys__invisible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.keys__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.keys__link {
+    font-size: 21px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(193, 39, 118);    
+    text-align: left;
+    margin: 0 20px 20px;
+    text-decoration: underline;
+}
+
+.keys__text {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: left;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
 
 @media(max-width: 1800px) {
     .services__page::after {
@@ -2332,6 +2387,10 @@ html {
 
 @media(max-width: 1200px) {
 
+    .keys__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .footer__container {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -2430,9 +2489,21 @@ html {
     .swiper-slide--container {
         gap: 20px;
     }
+
+    .keys__text {
+        font-size: 18px;
+    }
+
+    .keys__link {
+        font-size: 18px;
+    }
 }
 
 @media(max-width: 768px) {
+
+    .keys__container {
+        grid-template-columns: 1fr 1fr;
+    }
 
     .articles {
         padding: 60px 15px 60px;
@@ -2860,6 +2931,10 @@ html {
 
 @media(max-width: 535px) {
     .services__cards__container {
+        grid-template-columns: 1fr;
+    }
+
+    .keys__container {
         grid-template-columns: 1fr;
     }
 }
