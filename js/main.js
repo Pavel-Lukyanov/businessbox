@@ -88,6 +88,20 @@ document.addEventListener('DOMContentLoaded', function () {
             el: '.swiper-scrollbar',
             draggable: true,
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 13,
+            },
+            620: {
+                slidesPerView: 1.2,
+                spaceBetween: 13,
+            },
+            1024: {
+                slidesPerView: 1.5,
+                spaceBetween: 13,
+            }
+        }
     });
 
 
@@ -100,6 +114,20 @@ document.addEventListener('DOMContentLoaded', function () {
         roundLengths: true,
         loopAdditionalSlides: 10,
         loop: true,
+        breakpoints: {
+            320: {
+                slidesPerView: 1.2,
+            },
+            425: {
+                slidesPerView: 1.5,
+            },
+            1000: {
+                slidesPerView: 2,
+            },
+            1400: {
+                slidesPerView: 2.8,
+            }
+        }
     });
 
 
@@ -154,14 +182,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 btn.disabled = true;
             }
         })
+
+        //Отправка формы
+        callForm.addEventListener('submit', submitTel)
+
+        function submitTel(event) {
+            event.preventDefault();
+        }
     }
 
-    //Отправка формы
-    callForm.addEventListener('submit', submitTel)
 
-    function submitTel(event) {
-        event.preventDefault();
-    }
 
     //Меню
     let menuContainer = document.getElementById('menu-dropdown');
