@@ -2352,6 +2352,10 @@ html {
     .question__right img {
         max-height: 300px;
     }
+
+    .articles {
+        background-image: none;
+    }
 }
 
 @media(max-width: 900px) {
