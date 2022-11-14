@@ -68,16 +68,40 @@ document.addEventListener('DOMContentLoaded', function () {
         direction: 'horizontal',
         loop: true,
 
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-prev-result',
-            prevEl: '.swiper-button-next-result',
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
         },
     });
+
+    //Слайдер "Кейсы детальная"
+    const keysDetail = new Swiper('.swiper-keys-detail', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1.5,
+        centeredSlides: true,
+        spaceBetween: 13,
+        loopAdditionalSlides: 10,
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+    });
+
+
+    //Слайдер страницы кейсы детальная "как это было"
+    const howWasSlider = new Swiper('.swiper-how-was', {
+        // Optional parameters
+        spaceBetween: 1,
+        slidesPerView: 2.8,
+        centeredSlides: true,
+        roundLengths: true,
+        loopAdditionalSlides: 10,
+        loop: true,
+    });
+
 
     //Слайдер "страница Статьи"
     const articlesSlider = new Swiper('.swiper-articles', {
