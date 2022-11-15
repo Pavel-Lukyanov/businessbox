@@ -67,11 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
-
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true,
+         // Navigation arrows
+         navigation: {
+            nextEl: '.swiper-button-next-result',
+            prevEl: '.swiper-button-prev-result',
         },
+        
     });
 
     //Слайдер "Кейсы детальная"

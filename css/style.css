@@ -329,16 +329,16 @@ html {
 }
 
 .hero__img {
-    max-width: 1050px;
+    /* max-width: 1050px; */
+    width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     user-select: none;
 }
 
 .hero {
     background-color: #14172d;
     max-width: 1920px;
-    height: 1110px;
     margin: auto;
 }
 
