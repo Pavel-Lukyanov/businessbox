@@ -67,12 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
-         // Navigation arrows
-         navigation: {
+        // Navigation arrows
+        navigation: {
             nextEl: '.swiper-button-next-result',
             prevEl: '.swiper-button-prev-result',
         },
-        
+
     });
 
     //Слайдер "Кейсы детальная"
@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
     //Слайдер страницы кейсы детальная "как это было"
     const howWasSlider = new Swiper('.swiper-how-was', {
         // Optional parameters
@@ -130,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-
 
     //Слайдер "страница Статьи"
     const articlesSlider = new Swiper('.swiper-articles', {
@@ -189,10 +187,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function submitTel(event) {
             event.preventDefault();
+            fetch('send.php', {
+                method: 'POST',
+                body: new FormData(callForm)
+            }).then((res) => res.json()).then(result => {
+                if (result.error === false) {
+                    callForm.innerHTML = '<div class="popup__text">Ваша заявка принята<br>Мы свяжемся с вами в ближайшее время</div>';
+                }
+            }).catch((err) => alert('Что-то пошло не так, попробуйте ещё раз'));
         }
     }
-
-
 
     //Меню
     let menuContainer = document.getElementById('menu-dropdown');
@@ -220,5 +224,94 @@ document.addEventListener('DOMContentLoaded', function () {
     animBlocks.forEach(el => {
         observer.observe(el);
     })
-})
 
+    //Форма в модалке
+    let btnForms = document.querySelectorAll('.modal-form');
+    let popupForm = document.getElementById('cooperation');
+
+    if (btnForms.length > 0) {
+        btnForms.forEach(el => {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                popupForm.classList.add('popup__opened');
+            })
+        })
+        //Закрытие модалки при клике вне ее область
+        popupForm.addEventListener('click', function (e) {
+            if (e.target == popupForm) {
+                popupForm.classList.remove('popup__opened');
+            }
+        })
+    }
+
+    //Открытие фоток в модалке из секции "Результаты"
+    let resultPhoto = document.querySelectorAll('.result__card-img');
+    if (resultPhoto.length > 0) {
+        let modalResult = document.getElementById('modalResult');
+        let imgResult = document.getElementById('imgResult');
+        resultPhoto.forEach(el => {
+            el.addEventListener('click', () => {
+                imgResult.src = el.src;
+                modalResult.classList.add('popup__opened');
+            })
+        })
+        //Закрытие модалки при клике вне ее область
+        modalResult.addEventListener('click', function (e) {
+            if (e.target != imgResult) {
+                modalResult.classList.remove('popup__opened');
+            }
+        })
+    }
+
+    //Сдвиг плейсхолдеров в форме
+    let inputs = document.querySelectorAll('.popup__input');
+    inputs.forEach(el => {
+        el.addEventListener('focus', function () {
+            el.previousElementSibling.classList.add('active');
+            el.style.border = '1px solid #FFFFFF';
+            if (el.name == 'name') {
+                el.previousElementSibling.innerHTML = 'Ваше Имя <span class="popup__required">*</span>';
+                el.previousElementSibling.style.color = '#FFFFFF';
+            }
+            if (el.name == 'contact') {
+                el.previousElementSibling.innerHTML = 'Ваш тел. или email <span class="popup__required">*</span>';
+                el.previousElementSibling.style.color = '#FFFFFF';
+            }
+        })
+        el.addEventListener('blur', function () {
+            if (el.value == '') {
+                el.previousElementSibling.classList.remove('active');
+            }
+        })
+    })
+
+
+    //Отправка формы сотрудничества
+    let formCooperation = document.getElementById('cooperation-form');
+    if (formCooperation) {
+        formCooperation.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let ch = 0;
+            inputs.forEach(el => {
+                if (el.value == '') {
+                    el.style.border = '1px solid red';
+                    el.previousElementSibling.textContent = 'Ошибка';
+                    el.previousElementSibling.style.color = 'red';
+                    ch = 0;
+                } else {
+                    ch++;
+                }
+            })
+            if (ch == inputs.length) {
+                fetch('send.php', {
+                    method: 'POST',
+                    body: new FormData(formCooperation)
+                }).then((res) => res.json()).then(result => {
+                    if (result.error === false) {
+                        formCooperation.innerHTML = '<div class="popup__text">Ваша заявка принята<br><br>Мы свяжемся с вами в ближайшее время</div>';
+                    }
+                }).catch((err) => alert('Что-то пошло не так, попробуйте ещё раз'));
+            }
+        })
+    }
+})
