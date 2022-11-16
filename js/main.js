@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    //Инициализация ленивой загрузки
+    lazyload();
+
     //Слайдер "Главный"
     const mainSlider = new Swiper('.swiper-main', {
         // Optional parameters
