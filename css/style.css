@@ -669,11 +669,26 @@ html {
     justify-content: center;
 }
 
+.cases__swiper__container {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
 .cases__img {
     max-width: 345px;
     width: 100%;
     height: auto;
     object-fit: contain;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cases__img:hover {
+    transform: scale(1.02);
 }
 
 .create__img {
@@ -1830,7 +1845,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 200px;
-    row-gap: 146px;
+    row-gap: 155px;
     position: relative;
     width: 100%;
     overflow-x: auto;
@@ -1841,7 +1856,7 @@ html {
 .experience__timeline::before {
     content: '';
     position: absolute;
-    top: -60px;
+    top: -83px;
     bottom: 0;
     height: 3px;
     width: 1200px;
@@ -1869,7 +1884,7 @@ html {
     font-family: "Montserrat", sans-serif;
     color: rgb(36, 36, 36);
     font-weight: bold;
-    top: -48px;
+    top: -70px;
     left: 20%;
 }
 
@@ -2532,6 +2547,10 @@ html {
     transform: scale(0.8) !important;
 }
 
+.cases-slide {
+    min-height: 500px;
+}
+
 .swiper-how-was__container .swiper-slide-active {
     transform: scale(1) !important;
     opacity: 1;
@@ -2691,6 +2710,51 @@ html {
     color: rgb(255, 255, 255);
     outline: none;
     padding: 0 30px;
+}
+
+.popup__container-cases {
+    background-image: none;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    padding-top: 90px;
+}
+
+.swiper-pagination--cases {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+}
+
+.popup__close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 9999;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url(../img/close.svg);
+    cursor: pointer;
+    transition: 0.3s;
+    background-size: 30px;
+    top: 10%;
+    right: 20px;
+}
+
+.popup__close:hover {
+    opacity: 0.6;
+}
+
+.popup__cases-img {
+    width: 80vw;
+    max-width: 1600px;
+    height: 80vh !important;
+    object-fit: contain;
+    user-select: none;
+}
+
+.popup__content-cases {
+    padding: 0;
 }
 
 .placeholder__text {

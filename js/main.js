@@ -78,6 +78,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    //Слайдер в модалке "Кейсы"
+    const casesSlider = new Swiper('.swiper-cases', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination--cases',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next-cases',
+            prevEl: '.swiper-button-prev-cases',
+        },
+        preloadImages: false,
+        // Enable lazy loading
+        lazy: true,
+    });
+
     //Слайдер "Кейсы детальная"
     const keysDetail = new Swiper('.swiper-keys-detail', {
         // Optional parameters
@@ -287,6 +305,23 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     })
+
+
+    //Вызов модалки со свайпером в разделе все кейсы
+    let casesImgBtns = document.querySelectorAll('.modal-cases');
+    let casesModal = document.getElementById('cases');
+    if (casesImgBtns.length > 0) {
+        casesImgBtns.forEach(el => {
+            el.addEventListener('click', function () {
+                casesModal.classList.add('popup__opened');
+            })
+        })
+        //Закрытие модалки при клике вне ее область
+        let closeModal = document.getElementById('closeModal');
+        closeModal.addEventListener('click', () => {
+            casesModal.classList.remove('popup__opened');
+        })
+    }
 
 
     //Отправка формы сотрудничества
